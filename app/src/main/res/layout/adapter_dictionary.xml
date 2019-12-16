@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/mainRow"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <androidx.appcompat.widget.AppCompatCheckedTextView
+        android:layout_width="0dp"
+        android:layout_weight="0.9"
+        android:hint="@string/hint_Word"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:id="@+id/tv_Word"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:paddingLeft="5dp"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/changeBulb"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorPrimaryDark"
+        android:layout_weight="0.2"/>
+
+
+
+
+    <androidx.appcompat.widget.AppCompatCheckedTextView
+        android:layout_width="0dp"
+        android:layout_weight="0.9"
+        android:textSize="20sp"
+        android:hint="@string/hint_Frequency"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:id="@+id/tv_Frequency"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
