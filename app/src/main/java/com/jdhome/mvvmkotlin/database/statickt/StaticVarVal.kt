@@ -17,6 +17,8 @@ class StaticVarVal {
         const val applicationName = "SpeechToTextRecognize"
 
 
+
+
     }
 
 }

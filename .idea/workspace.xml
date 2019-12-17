@@ -6,8 +6,9 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="Index" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1044319-ed65-490d-bc87-830c983b6a8d" name="Default Changelist" comment="">
@@ -56,8 +57,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/ui/adapter/DictionaryAdapter.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="91" column="33" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="33" />
+            <state relative-caret-position="173">
+              <caret line="93" column="66" selection-start-line="93" selection-start-column="66" selection-end-line="93" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -124,8 +125,8 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/adapter_dictionary.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/networking/model/ResponseData.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/ui/adapter/DictionaryAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/ui/activity/home/HomeActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/ui/adapter/DictionaryAdapter.kt" />
       </list>
     </option>
   </component>
@@ -376,7 +377,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.32960895" />
@@ -391,8 +391,8 @@
       <window_info anchor="bottom" id="Logcat" order="1" weight="0.32736155" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Android Profiler" order="3" />
-      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.5439739" />
-      <window_info anchor="bottom" id="Terminal" order="5" weight="0.32899022" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.5439739" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="5" visible="true" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Flutter Performance" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="8" />
@@ -419,21 +419,15 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/ui/adapter/DictionaryAdapter.kt</url>
-          <line>90</line>
+          <line>91</line>
           <properties />
-          <option name="timeStamp" value="45" />
+          <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/ui/adapter/DictionaryAdapter.kt</url>
-          <line>92</line>
+          <line>93</line>
           <properties />
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/ui/adapter/DictionaryAdapter.kt</url>
-          <line>94</line>
-          <properties />
-          <option name="timeStamp" value="47" />
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -718,8 +712,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/ui/adapter/DictionaryAdapter.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="91" column="33" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="33" />
+        <state relative-caret-position="173">
+          <caret line="93" column="66" selection-start-line="93" selection-start-column="66" selection-end-line="93" selection-end-column="66" />
         </state>
       </provider>
     </entry>
