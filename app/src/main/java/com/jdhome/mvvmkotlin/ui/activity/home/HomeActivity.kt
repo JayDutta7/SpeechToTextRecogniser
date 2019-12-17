@@ -124,7 +124,7 @@ class HomeActivity : AppCompatActivity() {
 
                // val defaultValue =    data.getStringArrayListExtra(RecognizerIntent.ACTION_GET_LANGUAGE_DETAILS)
                 val result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)
-                if (tempData.isNotEmpty()) {
+                if (tempData.isEmpty()) {
                     for (i in 0 until tempData.size) {
                         if (result[0].toLowerCase().trim() == tempData[i].word?.toLowerCase()?.trim())
                             dictionarydapter.setFilter(result[0], i)
