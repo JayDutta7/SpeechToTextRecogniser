@@ -13,5 +13,5 @@ data class ResponseData(
     var word: String?,
     @SerializedName("frequency")
     @Expose
-    val frequency: Int
+    var frequency: Int
 ) : Parcelable

@@ -19,6 +19,7 @@ import com.jdhome.mvvmkotlin.viewmodel.home.HomeViewModel
 import kotlinx.android.synthetic.main.activity_home.*
 import timber.log.Timber
 import java.util.*
+import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
 
 
@@ -28,6 +29,8 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var homeViewModel: HomeViewModel
     private lateinit var parameters: HashMap<Int, String>
     private lateinit var dictionarydapter: DictionaryAdapter
+
+    private lateinit var tempData: ArrayList<ResponseData>
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,7 +57,8 @@ class HomeActivity : AppCompatActivity() {
         homeViewModel.mutableLiveData.observe(this, Observer {
 
             Timber.e("""Size${it?.size}""")
-
+            if (it.isNotEmpty())
+                tempData = it
             //set Value
             dictionarydapter = DictionaryAdapter(context = this, apiData = it)
             recyclerView_Dictonary.adapter = dictionarydapter
@@ -72,8 +76,12 @@ class HomeActivity : AppCompatActivity() {
                 )
                 intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault().toString())
 
-                //extras?.putParcelableArrayList("value", it)
-
+                /*for (i in 0 until it.size) {
+                    intent.putExtra(
+                        RecognizerIntent.ACTION_GET_LANGUAGE_DETAILS,
+                        arrayListOf(it[i].word + " " + it[i].frequency)
+                    )
+                }*/
 
                 if (intent.resolveActivity(packageManager) != null) {
 
@@ -114,19 +122,19 @@ class HomeActivity : AppCompatActivity() {
         when (requestCode) {
             0 -> if (resultCode == Activity.RESULT_OK && data != null) {
 
-                //val defaultValue = data.extras?.getParcelableArrayList<ResponseData>("value")
+               // val defaultValue =    data.getStringArrayListExtra(RecognizerIntent.ACTION_GET_LANGUAGE_DETAILS)
                 val result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)
-                /* if (defaultValue != null && defaultValue.isNotEmpty()) {
-                     for (i in 0 until defaultValue.size) {
-                         if (result[0].toLowerCase().trim() == defaultValue[i].word?.trim())
-                             dictionarydapter.setFilter(result[0], i)
-                     }
+                if (tempData.isNotEmpty()) {
+                    for (i in 0 until tempData.size) {
+                        if (result[0].toLowerCase().trim() == tempData[i].word?.toLowerCase()?.trim())
+                            dictionarydapter.setFilter(result[0], i)
+                    }
 
-                 } else {*/
+                } else {
 
-                dictionarydapter.setFilter(result[0], 0.inc())
+                    dictionarydapter.setFilter(result[0], 0.inc())
 
-                //}
+                }
 
 
             } else {

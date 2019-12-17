@@ -82,17 +82,16 @@ class DictionaryAdapter(
                 )
 
                 //+1 up frequency
-                holder.txtFrequency?.text =
-                    rowIndex?.let { apiData[position].frequency.plus(it).toString() }
-
-                //Position Change
                 rowIndex?.let {
-                    if (it == 1)
-                        Collections.swap(apiData, position, it - 1)
-                    else
-                        Collections.swap(apiData, position, position - 1)
+                    if (it > 0) {
+                        holder.txtFrequency?.text = apiData[position].frequency++.toString()
+                        //Collections.swap(apiData, position, position - it)
+                    } else
+                        holder.txtFrequency?.text =
+                            apiData[position].frequency.plus(0.dec()).toString()
+                        //Collections.swap(apiData, position, position - 1)
+                }
 
-                }//it-1
 
             } else {
                 //Toast.makeText(context, "No Match Found", Toast.LENGTH_SHORT).show()
