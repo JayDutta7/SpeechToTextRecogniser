@@ -124,15 +124,16 @@ class HomeActivity : AppCompatActivity() {
 
                // val defaultValue =    data.getStringArrayListExtra(RecognizerIntent.ACTION_GET_LANGUAGE_DETAILS)
                 val result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)
-                if (tempData.isEmpty()) {
+                if (tempData.isNotEmpty()) {
                     for (i in 0 until tempData.size) {
-                        if (result[0].toLowerCase().trim() == tempData[i].word?.toLowerCase()?.trim())
+                        if (result[0].toLowerCase().trim() == tempData[i].word?.toLowerCase()?.trim() || result[0].toLowerCase().trim() == tempData[i].frequency.toString().toLowerCase().trim() )
                             dictionarydapter.setFilter(result[0], i)
                     }
 
                 } else {
 
-                    dictionarydapter.setFilter(result[0], 0.inc())
+
+                    Timber.e("LogData is empty")
 
                 }
 

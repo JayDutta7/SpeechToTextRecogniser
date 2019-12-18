@@ -90,10 +90,10 @@ class DictionaryAdapter(
                 rowIndex?.let {
                     Timber.e("Index$rowIndex")
                     if (it > 0 && position != 0) {
-                        Collections.swap(apiData, position, position - 1)
+                        Collections.swap(apiData, position, it - 1)
 
                     } else {
-                        Collections.swap(apiData, it, position + 1)//- 1
+                        Collections.swap(apiData, position, it)//- 1
                     }
                 }//it-1
 
