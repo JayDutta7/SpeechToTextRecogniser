@@ -15,6 +15,7 @@ import com.jdhome.mvvmkotlin.R
 import com.jdhome.mvvmkotlin.networking.WebService
 import com.jdhome.mvvmkotlin.networking.model.ResponseData
 import com.jdhome.mvvmkotlin.ui.adapter.DictionaryAdapter
+import com.jdhome.mvvmkotlin.utility.UtilComparison
 import com.jdhome.mvvmkotlin.viewmodel.home.HomeViewModel
 import kotlinx.android.synthetic.main.activity_home.*
 import timber.log.Timber
@@ -126,8 +127,7 @@ class HomeActivity : AppCompatActivity() {
                 val result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)
                 if (tempData.isNotEmpty()) {
                     for (i in 0 until tempData.size) {
-                        if (result[0].toLowerCase().trim() == tempData[i].word?.toLowerCase()?.trim()
-                            || result[0].toLowerCase().trim() == tempData[i].frequency.toString().toLowerCase().trim())
+                        if (UtilComparison.compareString(result[0],tempData[i].word) || UtilComparison.compareString(result[0],tempData[i].frequency.toString()))
                             dictionarydapter.setFilter(result[0], i)
                         else
                             Toast.makeText(
