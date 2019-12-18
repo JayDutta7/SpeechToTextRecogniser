@@ -122,24 +122,32 @@ class HomeActivity : AppCompatActivity() {
         when (requestCode) {
             0 -> if (resultCode == Activity.RESULT_OK && data != null) {
 
-               // val defaultValue =    data.getStringArrayListExtra(RecognizerIntent.ACTION_GET_LANGUAGE_DETAILS)
+                // val defaultValue =    data.getStringArrayListExtra(RecognizerIntent.ACTION_GET_LANGUAGE_DETAILS)
                 val result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)
                 if (tempData.isNotEmpty()) {
                     for (i in 0 until tempData.size) {
-                        if (result[0].toLowerCase().trim() == tempData[i].word?.toLowerCase()?.trim() || result[0].toLowerCase().trim() == tempData[i].frequency.toString().toLowerCase().trim() )
+                        if (result[0].toLowerCase().trim() == tempData[i].word?.toLowerCase()?.trim()
+                            || result[0].toLowerCase().trim() == tempData[i].frequency.toString().toLowerCase().trim())
                             dictionarydapter.setFilter(result[0], i)
+                        else
+                            Toast.makeText(
+                                this,
+                                "No Match found",
+                                Toast.LENGTH_SHORT
+                            ).show()
                     }
 
                 } else {
-
-
                     Timber.e("LogData is empty")
-
                 }
 
 
             } else {
                 Timber.e("Data is Null")
+            }
+
+            else -> {
+
             }
 
         }

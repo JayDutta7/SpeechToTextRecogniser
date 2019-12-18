@@ -28,7 +28,6 @@ class DictionaryAdapter(
     private var findText: String? = null
     private var rowIndex: Int? = null
 
-    private var inCreaseNumber: Int = 1
 
 
     fun setFilter(
@@ -72,8 +71,7 @@ class DictionaryAdapter(
         holder.txtFrequency?.text = apiData?.get(position)?.frequency.toString()
 
         if (!TextUtils.isEmpty(findText)) {
-            if (findText?.toLowerCase()!!.trim() == apiData?.get(position)?.word?.toLowerCase()!!.trim()
-                || findText?.toLowerCase()!!.trim() == apiData[position].frequency.toString().toLowerCase().trim() /*&& rowIndex == position*/) {
+            if (rowIndex == position /*&& rowIndex == position*/) {
 
                 Timber.e("Match Found$rowIndex")
                 holder.imgBulb?.setBackgroundColor(
@@ -84,7 +82,7 @@ class DictionaryAdapter(
                 )
 
                 //+1 up frequency{Logic Left}
-                holder.txtFrequency?.text = apiData[position].frequency.plus(0.inc()).toString()
+                holder.txtFrequency?.text = apiData?.get(position)?.frequency?.plus(0.inc()).toString()
 
                 //Position Change
                 rowIndex?.let {
@@ -93,7 +91,7 @@ class DictionaryAdapter(
                         Collections.swap(apiData, position, it - 1)
 
                     } else {
-                        Collections.swap(apiData, position, it)//- 1
+                        Collections.swap(apiData, position, it)
                     }
                 }//it-1
 
