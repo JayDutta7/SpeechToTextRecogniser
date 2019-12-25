@@ -11,7 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1044319-ed65-490d-bc87-830c983b6a8d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/ui/activity/home/HomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/ui/activity/home/HomeActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/ui/adapter/DictionaryAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/ui/adapter/DictionaryAdapter.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,17 +56,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/ui/adapter/DictionaryAdapter.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="78" column="36" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="36" />
+            <state relative-caret-position="346">
+              <caret line="108" selection-start-line="108" selection-end-line="108" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/utility/UtilComparison.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -73,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/ui/activity/home/HomeActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="131" column="64" selection-start-line="131" selection-start-column="64" selection-end-line="131" selection-end-column="64" />
+            <state relative-caret-position="120">
+              <caret line="136" column="33" selection-start-line="136" selection-start-column="33" selection-end-line="136" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -171,9 +178,9 @@
         <option value="$PROJECT_DIR$/app/src/androidTest/java/com/jdhome/mvvmkotlin/ExampleInstrumentedTest.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/repository/home/HomeRepository.kt" />
         <option value="$PROJECT_DIR$/app/src/test/java/com/jdhome/mvvmkotlin/ExampleUnitTest.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/ui/adapter/DictionaryAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/utility/UtilComparison.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/ui/activity/home/HomeActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/ui/adapter/DictionaryAdapter.kt" />
       </list>
     </option>
   </component>
@@ -626,7 +633,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/ui/activity/home/HomeActivity.kt</url>
-          <line>150</line>
+          <line>151</line>
           <properties />
           <option name="timeStamp" value="33" />
         </line-breakpoint>
@@ -923,13 +930,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/ui/adapter/DictionaryAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="78" column="36" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/MyApplication.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-600">
@@ -937,17 +937,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/ui/activity/home/HomeActivity.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/utility/UtilComparison.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="131" column="64" selection-start-line="131" selection-start-column="64" selection-end-line="131" selection-end-column="64" />
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/utility/UtilComparison.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/ui/adapter/DictionaryAdapter.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+        <state relative-caret-position="346">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jdhome/mvvmkotlin/ui/activity/home/HomeActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="136" column="33" selection-start-line="136" selection-start-column="33" selection-end-line="136" selection-end-column="33" />
         </state>
       </provider>
     </entry>

@@ -106,7 +106,7 @@ class DictionaryAdapter(
                 }//it-1
 
             } else {
-                Toast.makeText(context, "No Match Found", Toast.LENGTH_SHORT).show()
+               // Toast.makeText(context, "No Match Found", Toast.LENGTH_SHORT).show()
                 Timber.e("No Match Found$rowIndex")
 
                 holder.imgBulb?.setBackgroundColor(
