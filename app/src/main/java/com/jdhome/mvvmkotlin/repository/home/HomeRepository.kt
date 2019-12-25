@@ -16,15 +16,14 @@ class HomeRepository {
         homeRepoApiService = ApiInterface.CreateRetrofit().apiService(StaticVarVal.baseUrl)
     }
 
-    fun getAllImages(values: HashMap<Int, String>): Single<ApiResponse>? {
 
+    fun getAllImages(values: HashMap<Int, String>): Single<ApiResponse>? {
         return homeRepoApiService?.getDicResult(
             values[0].toString()
         )?.doOnError {
             Timber.e(it)
         }?.subscribeOn(Schedulers.io())
          ?.observeOn(AndroidSchedulers.mainThread())
-
     }
 
 

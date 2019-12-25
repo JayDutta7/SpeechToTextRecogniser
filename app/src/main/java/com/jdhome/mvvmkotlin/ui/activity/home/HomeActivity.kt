@@ -114,6 +114,7 @@ class HomeActivity : AppCompatActivity() {
 
     }//end of onCreate
 
+
     override fun onActivityResult(
         requestCode: Int,
         resultCode: Int,
@@ -127,8 +128,12 @@ class HomeActivity : AppCompatActivity() {
                 val result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)
                 if (tempData.isNotEmpty()) {
                     for (i in 0 until tempData.size) {
-                        if (UtilComparison.compareString(result[0],tempData[i].word) || UtilComparison.compareString(result[0],tempData[i].frequency.toString()))
-                            dictionarydapter.setFilter(result[0], i)
+                        if (UtilComparison.binarySearch(
+                                mutableListOf(tempData[i].word!!),
+                                result[0]
+                            ) != -1
+                        )
+                            dictionarydapter.setFilter(result[0], tempData[i].word, i)
                         else
                             Toast.makeText(
                                 this,

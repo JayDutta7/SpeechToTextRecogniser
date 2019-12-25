@@ -15,6 +15,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.jdhome.mvvmkotlin.R
 import com.jdhome.mvvmkotlin.networking.model.ResponseData
+import com.jdhome.mvvmkotlin.utility.UtilComparison
 import kotlinx.android.synthetic.main.adapter_dictionary.view.*
 import timber.log.Timber
 import java.util.*
@@ -27,15 +28,19 @@ class DictionaryAdapter(
 
     private var findText: String? = null
     private var rowIndex: Int? = null
-
+    private var msgString: String? = null
 
 
     fun setFilter(
         searchText: String,
+        voiceString: String?,
         row: Int
     ) {
         findText = searchText
+        msgString = voiceString
         rowIndex = row
+
+
         notifyDataSetChanged()
     }
 
@@ -71,7 +76,8 @@ class DictionaryAdapter(
         holder.txtFrequency?.text = apiData?.get(position)?.frequency.toString()
 
         if (!TextUtils.isEmpty(findText)) {
-            if (rowIndex == position /*&& rowIndex == position*/) {
+            if (rowIndex == position
+                    /*&& rowIndex == position*/) {
 
                 Timber.e("Match Found$rowIndex")
                 holder.imgBulb?.setBackgroundColor(
@@ -82,17 +88,21 @@ class DictionaryAdapter(
                 )
 
                 //+1 up frequency{Logic Left}
-                holder.txtFrequency?.text = apiData?.get(position)?.frequency?.plus(0.inc()).toString()
+                holder.txtFrequency?.text =
+                    apiData?.get(position)?.frequency?.plus(0.inc()).toString()
 
                 //Position Change
                 rowIndex?.let {
                     Timber.e("Index$rowIndex")
+
+
                     if (it > 0 && position != 0) {
                         Collections.swap(apiData, position, it - 1)
 
                     } else {
                         Collections.swap(apiData, position, it)
                     }
+
                 }//it-1
 
             } else {
