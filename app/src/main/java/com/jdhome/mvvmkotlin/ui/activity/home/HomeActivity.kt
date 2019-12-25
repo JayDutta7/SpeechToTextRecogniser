@@ -129,8 +129,8 @@ class HomeActivity : AppCompatActivity() {
                 if (tempData.isNotEmpty()) {
                     for (i in 0 until tempData.size) {
                         if (UtilComparison.binarySearch(
-                                mutableListOf(tempData[i].word!!),
-                                result[0]
+                                mutableListOf(tempData[i].word?.trim()!!.toLowerCase()),
+                                result[0].trim().toLowerCase()
                             ) != -1
                         )
                             dictionarydapter.setFilter(result[0], tempData[i].word, i)

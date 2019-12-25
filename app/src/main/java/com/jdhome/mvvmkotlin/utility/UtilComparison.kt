@@ -1,6 +1,5 @@
 package com.jdhome.mvvmkotlin.utility
 
-import com.jdhome.mvvmkotlin.networking.model.ResponseData
 
 object UtilComparison {
 
