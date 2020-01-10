@@ -128,13 +128,12 @@ class HomeActivity : AppCompatActivity() {
                 val result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)
                 if (tempData.isNotEmpty()) {
                     for (i in 0 until tempData.size) {
-                        while (UtilComparison.binarySearch(
+                        if (UtilComparison.binarySearch(
                                 mutableListOf(tempData[i].word?.trim()!!.toLowerCase(Locale.US)),
                                 result[0].trim().toLowerCase(Locale.US)
                             ) != -1
                         ) {
                             dictionarydapter.setFilter(result[0], tempData[i].word, i)
-                            break
                         }
 
                     }
